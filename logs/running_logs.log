@@ -1,0 +1,47 @@
+[2024-07-14 13:42:53,623: INFO: main: Welcome to our custom logging]
+[2024-07-16 10:09:27,961: INFO: main: Welcome to our custom logging]
+[2024-07-17 08:34:46,048: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-17 08:34:46,049: ERROR: main: Error loading YAML file: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15]
+Traceback (most recent call last):
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\utils\common.py", line 26, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\composer.py", line 58, in compose_document
+    self.get_event()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\parser.py", line 118, in get_event
+    self.current_event = self.state()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\parser.py", line 193, in parse_document_end
+    token = self.peek_token()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 129, in peek_token
+    self.fetch_more_tokens()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\pipeline\stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\config\configuration.py", line 8, in __init__
+    self.config = read_yaml(config_filepath)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\utils\common.py", line 34, in read_yaml
+    raise ValueError(f"Error loading YAML file: {e}") from e
+ValueError: Error loading YAML file: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15
+[2024-07-17 09:42:30,889: INFO: config: PyTorch version 2.3.1 available.]

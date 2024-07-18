@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: textSummary
+Version: 0.0.0
+Summary: A small python package for NLP app
+Home-page: https://github.com/Harsh/Text-Summary
+Author: Harsh
+Author-email: harshgovil460@gmail.com
+Project-URL: Bug Tracker, https://github.com/Harsh/Text-Summary/issues
+License-File: LICENSE
+
+"Text summary"

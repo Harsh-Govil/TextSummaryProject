@@ -1,1 +1,1 @@
-# TextSummaryProject
+"Text summary"
